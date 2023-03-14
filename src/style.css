@@ -40,7 +40,7 @@ body{
 footer ul{
     display: flex;
     list-style: none;
-    gap: 2px;
+    gap: .75rem;
 }
 
 footer ul li{
