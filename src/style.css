@@ -7,13 +7,12 @@ body{
 
 .navbar{
     display: flex;
+    height: 3rem;
     justify-content: center;
     align-items: center;
     background-color: #ffa500;
-}
+    padding: 0 1rem;
 
-.navbar h1{
-    margin-left: 1rem;
 }
 
 .navbar ul{
