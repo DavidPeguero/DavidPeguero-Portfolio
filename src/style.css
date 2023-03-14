@@ -3,6 +3,7 @@
 }
 body{
     margin: 0;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
 
 .navbar{
@@ -12,8 +13,8 @@ body{
     align-items: center;
     background-color: #ffa500;
     padding: 0 1rem;
-
 }
+
 
 .navbar ul{
     display: flex;
@@ -31,11 +32,69 @@ body{
 .page-section h2{
     width: 4.5rem;
     flex-shrink: 0;
+    margin-right: 1rem;
 }
 
-.vert-div{
-    border-left: 6px solid #ffa500;
+.indent{
+    margin-left: 40px;
 }
+.vert-div{
+    border-left: 6px solid #f26b04;
+}
+.projects{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: .5rem
+}
+
+
+.project{
+    position: relative;
+    height: 10rem;
+    cursor: pointer;
+    flex-grow: 1;
+    border: #ffa500 solid 6px;
+}
+
+.project a{
+    color: black
+}
+
+.large-project{
+    height: 30rem;
+    flex-basis: 100%;
+}
+
+
+
+
+.project-img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    filter:grayscale(75%);
+    transition : 250ms ease-in-out;
+}
+
+.project:hover .project-img{
+    filter: none;
+    
+}
+
+.project-label{
+    position: absolute;
+    height: 5rem;
+    background-color: #ffa500;
+    padding-inline: 1rem;
+    font-size: 10px;
+    top: 30%;
+}
+
+.large-project-label{
+    top: 80%;
+}
+
 
 footer ul{
     display: flex;
