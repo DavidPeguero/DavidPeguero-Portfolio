@@ -1,5 +1,4 @@
 *{
-    box-sizing: border-box;
 }
 body{
     margin: 0;
@@ -23,6 +22,18 @@ body{
     gap: 8px;
 }
 
+.navbar p{
+    color: black;
+    text-decoration: underline 4px #f26b04;
+    line-height: 7px;
+    transform: translateY(0%);
+    transition: 100ms ease-in-out;
+}
+
+.navbar li:hover p{
+    transform: translateY(-10%);
+    
+}
 .page-section{
     display: flex;
     margin: 1rem 4rem;
@@ -41,11 +52,15 @@ body{
 .vert-div{
     border-left: 6px solid #f26b04;
 }
+
 .projects{
     display: flex;
     flex-wrap: wrap;
     list-style: none;
-    gap: .5rem
+    justify-content: left;
+    max-width: 1208px;
+    width: 100%;
+    gap: .5rem;
 }
 
 
@@ -53,7 +68,6 @@ body{
     position: relative;
     height: 10rem;
     cursor: pointer;
-    flex-grow: 1;
     border: #ffa500 solid 6px;
 }
 
@@ -66,15 +80,31 @@ body{
     flex-basis: 100%;
 }
 
+.small-projects{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    width: 100%;
+    gap: .5rem;
+}
+
+.small-projects .project{
+    width: 100%;
+    flex-basis: calc(50% - .95rem);
+}
 
 
 
 .project-img{
-    object-fit: cover;
+    object-fit:cover;
     width: 100%;
     height: 100%;
     filter:grayscale(75%);
     transition : 250ms ease-in-out;
+}
+
+.fit-img{
+    object-fit: contain;
 }
 
 .project:hover .project-img{
@@ -84,7 +114,9 @@ body{
 
 .project-label{
     position: absolute;
-    height: 5rem;
+    display: flex;
+    flex-direction: column;
+    font-size: (10px, 2.5vw, 16px);
     background-color: #ffa500;
     padding-inline: 1rem;
     font-size: 10px;
@@ -100,6 +132,12 @@ footer ul{
     display: flex;
     list-style: none;
     gap: .75rem;
+}
+
+@media(max-width: 756px){
+    footer ul{
+        flex-direction: column;
+    }
 }
 
 footer ul li{
