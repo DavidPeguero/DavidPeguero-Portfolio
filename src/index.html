@@ -3,53 +3,94 @@
 
 <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./style.css">
     <title>David Peguero</title>
 </head>
 
 <body>
+    <!-- Navbar content -->
     <nav class="navbar">
         <h1>David Peguero</h1>
-        <section>
-            <ul>
-                <li>
-                    <a href="#about-me">About me</a>
-                </li>
-                <li>
-                    <a href="#work">Work</a>
-                </li>
-                <li>
-                    <a href="#contact-me">Contact Me</a>
-                </li>
-                <li>
-                    <a href="#Resume">Resume</a>
-                </li>
-            </ul>
-        </section>
+        <ul>
+            <li>
+                <a href="#about-me"><p>About Me</p></a>
+            </li>
+            <li>
+                <a href="#work"><p>Work</p></a>
+            </li>
+            <li>
+                <a href="#contact-me"><p>Contact Me</p></a>
+            </li>
+            <li>
+                <a href="#Resume"><p>Resume</p></a>
+            </li>
+        </ul>
     </nav>
+    <!-- Hero Section -->
     <header class="hero"></header>
-    <section id="about-me">
+
+    <!-- Page Section for About Me info -->
+    <section id="about-me" class="page-section">
         <h2>About Me</h2>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos perferendis aliquid quasi! Quidem earum minima in ut autem eum expedita reiciendis nisi ipsum, deleniti atque voluptatem aliquid odio recusandae accusamus. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere aliquid recusandae expedita mollitia, excepturi nesciunt magnam minus blanditiis officiis laboriosam maiores voluptate ab magni voluptatem illum. Veniam vero architecto officiis!</p>
+        <div class="vert-div"></div>
+        <div class="indent">
+            <p>I am a <strong>Web Developer</strong> who is currently working on several projects at once. I am working on creating
+                application for things that I am passionate about, such as games as well as personal pages such as this one.
+            </p>
+            <p>At the moment I am currently attending the UCF Fulltime Coding Bootcamp hoping to hone my skills in <strong>Coding</strong>, <strong>Web Development</strong> and <strong>Networking</strong>.</p>    
+        </div>
     </section>
-    <main id="work">
+
+    <!-- Page Section to display my work -->
+    <main id="work" class="page-section">
         <h2>Work</h2>
         <div class="vert-div"></div>
-        <div class="projects">  
-            <section class="project">Item 1</section>
-            <section class="project">Item 2</section>
-            <section class="project">Item 3</section>
-            <section class="project">Item 4</section>
+        <div class="projects indent">  
+            <section class="project large-project">
+                <image class="project-img" src="./assets/ygo.png" alt="ygo app img"></image>
+                <a href="https://github.com/DavidPeguero/Yugioh-BanListChangeScraper/releases/tag/1.0.0"></a>
+                <div class="project-label large-project-label">
+                    <h3>Project Name</h3>
+                    <p>Python | Web Scraping</p>
+                </div>
+            </section>
+            <div class="small-projects">
+                <section class="project">
+                    <image class="project-img" src="./assets/tenzies.png" alt="tenzies img"></image>
+                    <a href="https://david-peguero-tenzies.netlify.app/"></a>
+                    <div class="project-label">
+                        <h3>Tenzies</h3>
+                        <p>React | Netlify</p>
+                    </div>
+                </section>
+                <section class="project">
+                    <image class="project-img" src="./assets/dd-img.gif" alt="dd img"></image>
+                    <a href="https://github.com/CWolfe1320/dialoguedash"></a>
+                    <div class="project-label">
+                        <h3>Dialogue Dash</h3>
+                        <p>C# | Wit.ai | Unity</p>
+                    </div>
+                </section>
+                <section class="project">
+                    <a href="https://davidpeguerocard.netlify.app/"></a>
+                    <image class="project-img fit-img" src="./assets/business-card.png" alt="business card"></image>
+                    <div class="project-label">
+                        <h3>Business Card</h3>
+                        <p>React | Netlify</p>
+                    </div>
+                </section>
+            </div>
         </div>
     </main>
-    <footer id="contact-me">
+    <!-- Contact me information -->
+    <footer id="contact-me" class="page-section">
         <h2>Contact Me</h2>
+        <div class="vert-div"></div>
         <ul>
-            <li>{Phone Number}</li>
-            <li>{Email}</li>
-            <li>{Github}</li>
-            <li>{Twitter Link}</li>
-            <li>{Spotify}</li>
+            <li>787-508-5537</li>
+            <li>david.peguero.cancel@gmail.com</li>
+            <li><a href="https://github.com/DavidPeguero">GitHub</a></li>
+            <li>Twitter</li>
         </ul>
     </footer>
 </body>
