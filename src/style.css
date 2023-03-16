@@ -1,8 +1,11 @@
 *{
+    --main-color-orange: #ffa500;
+    --secondary-color-orange: #f26b04;
+    --font-hero-size: clamp(1.5rem, 2.5vw, 2.5rem)
 }
 body{
     margin: 0;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .navbar{
@@ -10,7 +13,7 @@ body{
     height: 3rem;
     justify-content: center;
     align-items: center;
-    background-color: #ffa500;
+    background-color: var(--main-color-orange);
     padding: 0 1rem;
 }
 
@@ -24,7 +27,7 @@ body{
 
 .navbar p{
     color: black;
-    text-decoration: underline 4px #f26b04;
+    text-decoration: underline 4px var(--secondary-color-orange);
     line-height: 7px;
     transform: translateY(0%);
     transition: 100ms ease-in-out;
@@ -34,6 +37,37 @@ body{
     transform: translateY(-10%);
     
 }
+
+.hero{
+    position: relative;
+    max-width: 100vw;
+    width: 100%;
+    height: 400px;
+}
+
+.hero-name{
+    position:absolute;
+
+    right: 5%; 
+    bottom: 10%;
+    background-color: var(--secondary-color-orange);
+    font-size: var(--font-hero-size);
+}
+
+.hero-tagline{
+    position:absolute;
+    bottom: 0;
+    right: 0;
+    background-color: var(--main-color-orange);
+    font-size: var(--font-hero-size);
+}
+
+.my-face{
+    position: absolute;
+    left: 50%;
+    height: 400px;
+}
+
 .page-section{
     display: flex;
     margin: 1rem 4rem;
@@ -50,7 +84,7 @@ body{
     margin-left: 40px;
 }
 .vert-div{
-    border-left: 6px solid #f26b04;
+    border-left: 6px solid var(--secondary-color-orange);
 }
 
 .projects{
@@ -68,7 +102,7 @@ body{
     position: relative;
     height: 10rem;
     cursor: pointer;
-    border: #ffa500 solid 6px;
+    border: var(--main-color-orange) solid 6px;
 }
 
 .project a{
@@ -116,20 +150,23 @@ body{
     position: absolute;
     display: flex;
     flex-direction: column;
-    font-size: (10px, 2.5vw, 16px);
-    background-color: #ffa500;
+    font-size: clamp(10px, 1.5vw, 16px);
+    background-color: var(--main-color-orange);
     padding-inline: 1rem;
     font-size: 10px;
-    top: 30%;
+    top: 40%;
 }
 
 .large-project-label{
-    top: 80%;
+    top: 75%;
 }
+
 
 
 footer ul{
     display: flex;
+    justify-content: center;
+    align-items: center;
     list-style: none;
     gap: .75rem;
 }
