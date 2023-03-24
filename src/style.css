@@ -1,8 +1,15 @@
-*{
+*{  
+    --header-color: #83929F;
+    --main-color-blue: #445877;
+    --secondary-color-blue: #91CBCD;
+    --main-hero-color: #16161D;
+    --main-background-color: #6F7289;
+    --font-hero-size: clamp(1.5rem, 2.5vw, 2.5rem);
 }
 body{
     margin: 0;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
 }
 
 .navbar{
@@ -10,34 +17,93 @@ body{
     height: 3rem;
     justify-content: center;
     align-items: center;
-    background-color: #ffa500;
+    background-color: var(--header-color);
     padding: 0 1rem;
 }
 
+.navbar h1{
+    background-color: #92CCCD;
+}
 
 .navbar ul{
     display: flex;
     list-style: none;
     margin-left: auto;
+    justify-content: center;
+    align-items: center;
     gap: 8px;
 }
 
-.navbar p{
-    color: black;
-    text-decoration: underline 4px #f26b04;
-    line-height: 7px;
-    transform: translateY(0%);
+.navbar .underline-anim{
+    position: relative;
+    padding: 2px;
+    text-decoration: none;
+    color: var(--secondary-color-blue);
+    transition: 100ms ease-in-out;
+    z-index: 0;
+}
+
+.underline-anim::after{
+    position: absolute;
+    content: "";
+    bottom: -2px;
+    left: 0;
+    background-color: var(--secondary-color-blue);
+    width: 100%;
+    height: 2px;
+    z-index: -1;
+}
+
+.navbar li:hover .underline-anim::after{
+    height: 100%;
     transition: 100ms ease-in-out;
 }
 
-.navbar li:hover p{
-    transform: translateY(-10%);
-    
+.navbar li:hover .underline-anim{
+    color: var(--main-color-blue);
 }
+
+
+
+
+
+
+.hero{
+    position: relative;
+    max-width: 100%;
+    width: 100%;
+    height: 300px;
+}
+
+.hero-name{
+    position:absolute;
+
+    right: 10%; 
+    bottom: 15%;
+    background-color: var(--secondary-color-blue);
+    font-size: var(--font-hero-size);
+}
+
+.hero-tagline{
+    position:absolute;
+    bottom: 2%;
+    right: 6%;
+    background-color: var(--main-color-blue);
+    font-size: var(--font-hero-size);
+}
+
+.my-face{
+    position: absolute;
+    right: 30%;
+    height: 300px;
+}
+
 .page-section{
     display: flex;
     margin: 1rem 4rem;
     gap: 1rem;
+    flex-basis: 100%;
+    justify-content: center;
 }
 
 .page-section h2{
@@ -50,7 +116,7 @@ body{
     margin-left: 40px;
 }
 .vert-div{
-    border-left: 6px solid #f26b04;
+    border-left: 6px solid var(--main-color-blue);
 }
 
 .projects{
@@ -68,7 +134,7 @@ body{
     position: relative;
     height: 10rem;
     cursor: pointer;
-    border: #ffa500 solid 6px;
+    border: var(--secondary-color-blue) solid 6px;
 }
 
 .project a{
@@ -90,7 +156,7 @@ body{
 
 .small-projects .project{
     width: 100%;
-    flex-basis: calc(50% - .95rem);
+    flex-basis: calc(50% - 1rem);
 }
 
 
@@ -116,25 +182,30 @@ body{
     position: absolute;
     display: flex;
     flex-direction: column;
-    font-size: (10px, 2.5vw, 16px);
-    background-color: #ffa500;
+    font-size: clamp(10px, 1.5vw, 16px);
+    background-color: var(--secondary-color-blue);
     padding-inline: 1rem;
     font-size: 10px;
-    top: 30%;
+    top: 40%;
 }
 
 .large-project-label{
-    top: 80%;
+    top: 75%;
 }
+
 
 
 footer ul{
     display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
     list-style: none;
     gap: .75rem;
 }
 
-@media(max-width: 756px){
+@media screen and (max-width: 756px){
+
     footer ul{
         flex-direction: column;
     }
