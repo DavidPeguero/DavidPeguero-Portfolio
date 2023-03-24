@@ -1,31 +1,43 @@
-*{  
-    --header-color: #31343D;
-    --main-color-blue: #445877;
-    --secondary-color-blue: #91CBCD;
-    --main-hero-color: #16161D;
-    --main-background-color: #6F7289;
+/*Set box sizing for all elements*/
+*{
+  box-sizing: border-box;  
 }
+
+/* Set some variable that will be used across the page */
+:root{
+    --primary: rgba(68, 88, 119, 1);
+    --secondary: rgba(146, 204, 206, 1);
+    --tertiary: rgba(49, 52, 61, 1);
+    --dark: rgba(28, 29, 33, 1);
+    --light: rgba(238, 238, 247, 1);
+}
+
+/* Typography setup */
 body{
     margin: 0;
+    padding: 0;
     font-family: sans-serif;
     font-size: 16px;
     line-height: 1.5;
-    color: var(--main-color-blue);
+    color: var(--primary);
+    background-color: var(--light);
+    line-height: 1.5;
 }
 
+/* Navbar properties */
 .navbar{
     display: flex;
     height: 3rem;
     justify-content: center;
     align-items: center;
-    background-color: var(--header-color);
+    background-color: var(--tertiary);
     padding: 0 1rem 0 0;
 }
 
 .navbar h1{
-    background-color: var(--secondary-color-blue);
+    background-color: var(--secondary);
     padding: 0 0.5rem 0 2rem;
-    color: var(--header-color);
+    color: var(--tertiary);
 }
 
 .navbar ul{
@@ -37,13 +49,14 @@ body{
     gap: 8px;
 }
 
-.navbar .underline-anim{
+/* class that underline and animates said underline on hover */
+.underline-anim{
     position: relative;
     padding: 3px;
     text-decoration: none;
     font-size: 17px;
     font-weight: 600;
-    color: var(--secondary-color-blue);
+    color: var(--secondary);
     transition: 100ms ease-in-out;
     z-index: 0;
 }
@@ -53,19 +66,20 @@ body{
     content: "";
     bottom: 0;
     left: 0;
-    background-color: var(--secondary-color-blue);
+    background-color: var(--secondary);
     width: 100%;
     height: 2px;
     z-index: -1;
 }
 
-.navbar li:hover .underline-anim::after{
+li:hover .underline-anim::after{
     height: 100%;
     transition: 100ms ease-in-out;
 }
 
-.navbar li:hover .underline-anim{
-    color: var(--header-color);
+li:hover .underline-anim{
+    color: var(--tertiary);
+    cursor: pointer;
 }
 
 
@@ -86,7 +100,7 @@ body{
 
     right: 5%; 
     bottom:5%; 
-    background-color: var(--secondary-color-blue);
+    background-color: var(--secondary);
     font-size: var(--font-hero-size);
 }
 
@@ -94,7 +108,7 @@ body{
     position:absolute;
     bottom: 2%;
     right: 6%;
-    background-color: var(--main-color-blue);
+    background-color: var(--primary);
     font-size: var(--font-hero-size);
 }
 
@@ -122,7 +136,7 @@ body{
     margin-left: 40px;
 }
 .vert-div{
-    border-left: 6px solid var(--main-color-blue);
+    border-left: 6px solid var(--primary);
 }
 
 .projects{
@@ -140,7 +154,7 @@ body{
     position: relative;
     height: 10rem;
     cursor: pointer;
-    border: var(--secondary-color-blue) solid 6px;
+    border: var(--secondary) solid 6px;
 }
 
 .project a{
@@ -189,7 +203,7 @@ body{
     display: flex;
     flex-direction: column;
     font-size: clamp(10px, 1.5vw, 16px);
-    background-color: var(--secondary-color-blue);
+    background-color: var(--secondary);
     padding-inline: 1rem;
     font-size: 10px;
     top: 40%;
@@ -199,7 +213,7 @@ body{
     top: 75%;
 }
 
-
+/* Footer specific code */
 
 footer ul{
     display: flex;
@@ -212,6 +226,25 @@ footer ul{
     gap: .75rem;
     
 }
+
+footer .underline-anim{
+    text-decoration: none;
+    color: var(--primary);
+}
+
+footer .underline-anim::after{
+    background-color: var(--primary);
+}
+
+footer li:hover .underline-anim::after{
+    height: 10%;
+}
+
+footer li:hover .underline-anim{
+    font-size: 18px;
+}
+
+
 
 @media screen and (max-width: 756px){
 
@@ -232,6 +265,3 @@ footer ul{
     }
 }
 
-footer ul li{
-    text-decoration: underline 2px black;
-}
