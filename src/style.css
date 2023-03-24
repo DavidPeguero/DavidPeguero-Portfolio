@@ -102,8 +102,6 @@ body{
     display: flex;
     margin: 1rem 4rem;
     gap: 1rem;
-    flex-basis: 100%;
-    justify-content: center;
 }
 
 .page-section h2{
@@ -208,6 +206,14 @@ footer ul{
 
     footer ul{
         flex-direction: column;
+    }
+
+    .large-project{
+        height: 10rem;
+    }
+
+    .small-projects .project{
+        flex-basis: 100%;
     }
 }
 
