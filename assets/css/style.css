@@ -166,11 +166,12 @@ li:hover .underline-anim{
     justify-content: left;
     width: 100%;
     gap: .5rem;
+    justify-content: space-between;
 }
 
 .small-projects .project{
     width: 100%;
-    flex-basis: calc(50% - .3rem);
+    flex-basis: calc(49%);
 }
 
 
