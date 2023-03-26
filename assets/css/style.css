@@ -257,7 +257,7 @@ footer li:hover .underline-anim{
         font-size: 20px;
     }
 
-    .navbar .underline-anim{
+    .underline-anim{
         font-size: 14px;
     }
 
@@ -272,4 +272,23 @@ footer li:hover .underline-anim{
     .small-projects .project{
         flex-basis: 100%;
     }
+}
+
+@media screen and (max-width: 504px){
+    .page-section{
+        margin-inline: .5rem;
+    }
+    .page-section h2{
+        width: 4rem;
+        font-size: 24px;
+    }
+
+    .navbar h1{
+        font-size: 14px;
+    }
+
+    .underline-anim{
+        font-size: 10px;
+    }
+
 }
