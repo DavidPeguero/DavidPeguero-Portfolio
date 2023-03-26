@@ -10,7 +10,7 @@
     --tertiary: rgba(49, 52, 61, 1);
     --dark: rgba(28, 29, 33, 1);
     --light: rgba(238, 238, 247, 1);
-    --hero-font-size: 36px;
+    --hero-font-size: 24px;
 }
 
 /* Typography setup */
@@ -89,29 +89,29 @@ li:hover .underline-anim{
 
 
 
-
+/* Hero Selectors  */
 .hero{
+    position: relative;
     display: flex;
     width: 100%;
+    height: 120px;
     background-image: url(../images/02-hero-bg.jpg);
     background-repeat: no-repeat;
     background-size:cover;
-    justify-content: flex-end;
 }
 
+/* Subtitle for the hero section */
 .hero-subtitle{
+    position: absolute;
+    bottom: 0;
+    right: 0;
     padding-inline: 1rem;
     background-color: var(--secondary);
     color: var(--dark);
     font-size: var(--hero-font-size);
 }
 
-.my-face{
-    position: absolute;
-    right: 30%;
-    height: 300px;
-}
-
+/* This represents a container with a title */
 .page-section{
     display: flex;
     margin: 1rem 2rem;
@@ -133,6 +133,7 @@ li:hover .underline-anim{
     border-left: 6px solid var(--primary);
 }
 
+/* Container that holds all the projects */
 .projects{
     display: flex;
     flex-wrap: wrap;
@@ -143,7 +144,7 @@ li:hover .underline-anim{
     gap: .5rem;
 }
 
-
+/* An individual project container/card */
 .project{
     position: relative;
     height: 10rem;
@@ -155,6 +156,7 @@ li:hover .underline-anim{
     color: black
 }
 
+/* This is a modifier for the first project (could also just do nth child for this case) */
 .large-project{
     height: 28rem;
     flex-basis: 100%;
@@ -242,10 +244,21 @@ footer li:hover .underline-anim{
 
 
 @media screen and (max-width: 756px){
-    
 
     footer ul{
         flex-direction: column;
+    }
+
+    
+}
+
+@media screen and (max-width: 650px){
+    .navbar h1{
+        font-size: 20px;
+    }
+
+    .navbar .underline-anim{
+        font-size: 14px;
     }
 
     .large-project{
@@ -258,15 +271,5 @@ footer li:hover .underline-anim{
 
     .small-projects .project{
         flex-basis: 100%;
-    }
-}
-
-@media screen and (max-width: 650px){
-    .navbar h1{
-        font-size: 20px;
-    }
-
-    .navbar .underline-anim{
-        font-size: 14px;
     }
 }
