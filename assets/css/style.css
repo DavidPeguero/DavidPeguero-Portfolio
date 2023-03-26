@@ -179,7 +179,7 @@ li:hover .underline-anim{
 }
 
 
-
+/* Image sizing, filter, and animation */
 .project-img{
     object-fit:cover;
     width: 100%;
@@ -197,6 +197,7 @@ li:hover .underline-anim{
     
 }
 
+/* The label that will go on top of the project card */
 .project-label{
     position: absolute;
     display: flex;
@@ -244,16 +245,18 @@ footer li:hover .underline-anim{
 }
 
 
-
+/* Footer starts to overflow at this width */
 @media screen and (max-width: 756px){
 
     footer ul{
         flex-direction: column;
+        align-items: flex-start;
     }
 
     
 }
 
+/* Length to make the large project card the same size as the rest */
 @media screen and (max-width: 650px){
     body{
         font-size: 14px;
@@ -282,6 +285,7 @@ footer li:hover .underline-anim{
     }
 }
 
+/* Sizing for even smaller screens otherwise overflow goes wonky */
 @media screen and (max-width: 504px){
     .page-section{
         margin-inline: .5rem;
@@ -297,11 +301,7 @@ footer li:hover .underline-anim{
 
     .navbar .underline-anim{
         font-size: 9px;
-    }
-
-    footer ul{
-        align-items: flex-start;
-    }
+    }G
 
     footer .underline-anim{
         font-size: 12px;
