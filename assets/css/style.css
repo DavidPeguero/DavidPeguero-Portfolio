@@ -12,7 +12,10 @@
     --light: rgba(238, 238, 247, 1);
     --hero-font-size: 24px;
 }
-
+html,body{
+    overflow-x:visible;
+    width: 100%;
+}
 /* Typography setup */
 body{
     margin: 0;
@@ -139,7 +142,6 @@ li:hover .underline-anim{
     flex-wrap: wrap;
     list-style: none;
     justify-content: left;
-    max-width: 1208px;
     width: 100%;
     gap: .5rem;
 }
@@ -253,8 +255,14 @@ footer li:hover .underline-anim{
 }
 
 @media screen and (max-width: 650px){
+    body{
+        font-size: 14px;
+    }
+    .page-section{
+        margin-inline: .5rem;
+    }
     .navbar h1{
-        font-size: 20px;
+        font-size: 18px;
     }
 
     .underline-anim{
@@ -284,11 +292,18 @@ footer li:hover .underline-anim{
     }
 
     .navbar h1{
-        font-size: 14px;
+        font-size: 12px;
     }
 
-    .underline-anim{
-        font-size: 10px;
+    .navbar .underline-anim{
+        font-size: 9px;
     }
 
+    footer ul{
+        align-items: flex-start;
+    }
+
+    footer .underline-anim{
+        font-size: 12px;
+    }
 }
