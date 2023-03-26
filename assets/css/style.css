@@ -56,6 +56,9 @@ body{
 }
 
 /* class that underline and animates said underline on hover */
+/* Possible change to do is create multiple underline-classes
+   so I don't bloat this class to much. 
+ */
 .underline-anim{
     position: relative;
     padding: 3px;
