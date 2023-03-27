@@ -121,7 +121,7 @@ li:hover .underline-anim{
 .page-section{
     display: flex;
     margin-block: 1rem;
-    margin-inline: 10rem;
+    margin-inline: 2rem;
     gap: 1rem;
 }
 
@@ -257,9 +257,6 @@ footer li:hover .underline-anim{
         align-items: flex-start;
     }
 
-    .page-section{
-        margin-inline: 4rem;
-    }
     
 }
 
