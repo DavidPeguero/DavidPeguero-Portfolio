@@ -120,7 +120,8 @@ li:hover .underline-anim{
 /* This represents a container with a title */
 .page-section{
     display: flex;
-    margin: 1rem 2rem;
+    margin-block: 1rem;
+    margin-inline: 10rem;
     gap: 1rem;
 }
 
@@ -256,6 +257,9 @@ footer li:hover .underline-anim{
         align-items: flex-start;
     }
 
+    .page-section{
+        margin-inline: 4rem;
+    }
     
 }
 
